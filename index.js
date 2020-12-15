@@ -306,6 +306,7 @@ function smartInit(){
         'deliver',
         'init',
         '--username', cfg.apple_id,
+        '--use-live-version',
         '-a', tiapp.id
     ];
 
@@ -639,7 +640,7 @@ exports.send = function(opts){
         }
         
         if(cfg.team_name != "null"){
-          initArgs.push('-e');
+          initArgs.push('--team_name');
           initArgs.push(cfg.team_name);
         }
 
