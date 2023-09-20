@@ -578,6 +578,10 @@ exports.send = function (opts) {
             initArgs.push("--skip_metadata");
         }
 
+        if (opts.api_key_path) {
+            initArgs.push("--api_key_path " + opts.api_key_path);
+        }
+
         if (opts.submit_for_review) {
             initArgs.push("--submit_for_review");
         }
