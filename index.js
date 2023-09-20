@@ -579,7 +579,8 @@ exports.send = function (opts) {
         }
 
         if (opts.api_key_path) {
-            initArgs.push("--api_key_path " + opts.api_key_path);
+            initArgs.push("--api_key_path");
+            initArgs.push(opts.api_key_path);
         }
 
         if (opts.submit_for_review) {
