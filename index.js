@@ -260,7 +260,7 @@ function uploadBetaTestIPA(opts) {
 /*
 @ smartInit
 */
-function smartInit() {
+function smartInit(opts) {
     //Create delivery directory if it doesn't exist
     if (!fs.existsSync(deliveryDir)) {
         fs.mkdirSync(deliveryDir);
@@ -459,7 +459,7 @@ exports.init = function (opts) {
 
     if (opts.smart) {
         console.log(chalk.cyan("Initializing TiFastLane Smart Mode"));
-        smartInit();
+        smartInit(opts);
     } else {
         console.log(chalk.cyan("Initializing TiFastLane"));
 
