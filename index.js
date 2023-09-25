@@ -278,6 +278,11 @@ function smartInit() {
 
     var initArgs = ["deliver", "init", "--username", cfg.apple_id, "-a", tiapp.id];
 
+    if (opts.api_key_path) {
+        initArgs.push("--api_key_path");
+        initArgs.push(opts.api_key_path);
+    }
+
     exec(fastlaneBinary, initArgs, { cwd: appDeliveryDir }, function (e) {
         // Create Extra Files
         extraFiles();

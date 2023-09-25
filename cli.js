@@ -28,6 +28,7 @@ program
     .description("Initialize of all components needed to work")
     .option("-c, --config [value]", "Use another config file found in the root")
     .option("-s, --smart", "If your app is already on the App Store run init with -s")
+    .option("--api_key_path [value]", "Add Key file for AppStore Connect API")
     .action(init);
 
 /*
